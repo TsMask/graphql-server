@@ -1,0 +1,5 @@
+type Mutation {
+      createUser(user: ReviewInput): User!
+      updateUser(id: ID!,user: ReviewInput): User!
+      deleteUser(id: ID!): User!
+}

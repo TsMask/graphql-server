@@ -1,0 +1,25 @@
+type User {
+    id: ID
+    username: String
+    password: String
+    info: Info
+}
+
+type Info {
+    id: ID
+    age: Int
+    firstName: String
+    lastName: String
+}
+
+input ReviewInput {
+   username: String!
+   password: String!
+   info: ReviewInfoInput
+}
+
+input ReviewInfoInput {
+    age: Int
+    firstName: String
+    lastName: String
+}

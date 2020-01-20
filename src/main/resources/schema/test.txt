@@ -1,0 +1,58 @@
+# 变量参数
+{
+  "id": "user-1",
+  "user": {
+    "password": "sms",
+    "username": "msm",
+    "info": {
+      "firstName": "nos"
+    }
+  }
+}
+
+# 查询
+query userR($id: ID!) {
+  hello
+  echo(toEcho: "SpringBoot")
+  users {
+    id
+    password
+    username
+  }
+  user(id: $id) {
+    id
+    password
+    username
+    info{
+      id
+      age
+    }
+  }
+}
+
+# 更新修改删除
+mutation userCUD($user: ReviewInput,$id: ID!){
+  createUser(user: $user){
+    id
+    password
+    info{
+      id
+      firstName
+    }
+  }
+  # updateUser(id: $id,user: $user){
+  #   id
+  #   password
+  #   info{
+  #     id
+  #     age
+  #   }
+  # }
+  deleteUser(id: $id){
+    id
+    info{
+      id
+      firstName
+    }
+  }
+}
